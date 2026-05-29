@@ -8,7 +8,6 @@
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
-
 // NeoPixel setup
 Adafruit_NeoPixel pixels(NUM_LEDS, NEOPIXEL_PIN, NEO_GRB + NEO_KHZ800);
 
@@ -63,7 +62,7 @@ void setup() {
     Serial.println(F("SSD1306 allocation failed"));
     for(;;);
   }
-  display.setRotation(1); // Rotate 90 degrees CW. Resolution becomes 64x128
+  display.setRotation(3); // Rotate 90 degrees CW. Resolution becomes 64x128
   display.clearDisplay();
   display.display();
 
